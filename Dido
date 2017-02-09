@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dido;
+
+/**
+ *
+ * @author Daniel Peraza
+ */
+import java.util.*;
+
+public class Dido {
+    
+    
+    static double area(double a, double b){
+    
+        double area= (250000/Math.PI)*Math.pow(a*b,2);
+        
+        return area;
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+        String a;
+        
+        System.out.println("Introduce the length followed by a comma,\nand then introduce the wide");
+  
+        Scanner lec = new Scanner (System.in);
+        a = lec.nextLine();
+        
+        String[] parts = a.split(",");
+        
+        String part1= parts[0];
+        String part2= parts[1];
+        
+        System.out.println("Parte 1: \n"+part1);
+        System.out.println("Parte 2: \n"+part2);
+        
+        double l=Double.parseDouble(part1);
+        double w=Double.parseDouble(part2);
+        
+        double c= area(l,w);
+        
+        System.out.println("Maximum Area="+c);
+    }
+    
+}
