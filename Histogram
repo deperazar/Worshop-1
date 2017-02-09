@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package histogram;
+
+/**
+ *
+ * @author PERSONAL
+ */
+import java.util.*;
+public class Histogram {
+
+  
+
+    public static void main(String[] args) {
+        
+        Scanner lec = new Scanner (System.in);
+        int histnumber;
+        int histlength;
+        
+        String [] info= new String[20]; 
+       
+       
+        String data;
+        
+        System.out.println("Introduce the number of histograms you want");
+        histnumber=lec.nextInt();
+        System.out.println("Introduce the length of all the histograms");
+        histlength=lec.nextInt();
+        
+        System.out.println("Introduce the data");
+        System.out.println("Type 's' if you don't want to write more numbers");
+        for(int i=1;i<20;i++){
+        info[i]=lec.nextLine();
+        
+        /*if(i%histlength==0){
+           info[i]=",";
+        }*/
+        if("s".equals(info[i])){
+            i=20;
+        } 
+        }
+        String [] hist= new String[histnumber]; 
+        //hist[0] = "";
+        for(int i=0;i<histnumber;i++){
+            for(int j=0;j<histlength;j++){
+                hist[i]=hist[i]+info[j+1]+",";
+            }
+            
+        }
+        System.out.println(hist[0]);
+        
+    
+}
+}
